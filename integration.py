@@ -174,7 +174,7 @@ def integr_Simpson(t):
     return I
 
 
-print(integr_rectangle_L(np.log(1)))
+print(integr_rectangle_L(np.pi))
 print(integr_rectangle_M(np.pi))
 print(integr_rectangle_R(np.pi))
 print(integr_trapezoid(np.pi))
