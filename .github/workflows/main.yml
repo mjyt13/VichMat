@@ -8,38 +8,38 @@ on:
 
 jobs:
 
-  build: #для сборки
-    runs-on: windows-latest
+  build:
+    runs-on: windows
 
     steps:
-    -name: Checkout code
-     uses: actions/chechout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
       
-    -name: Set up Python
-     uses: actions/setup-python@v4
-     with:
-       python-version: '3.10'
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
 
-    -name: Install dependencies
-     run: |
+    - name: Install dependencies
+      run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    -name: Run tests and create report
-     run: |
+    - name: Run tests and create report
+      run: |
        pytest --html=report.html --self-contained-html
     
-    -name: Run tests
-     run: |
+    - name: Run tests
+      run: |
        python -m pytest test_numerical.py
     
-    -name: Upload test report
+    - name: Upload test report
       uses: actions/upload-artifact@v4
       with:
         name: test-report
         path: report.html
     
-    -name: Upload code Artifact
+    - name: Upload code Artifact
       if: success()
       uses: actions/upload-artifact@v4
       with:
