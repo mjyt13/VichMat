@@ -16,3 +16,8 @@ def test_integr_Simpson():
 
 def test_newton():
     assert newton(4,5) == 4.47
+
+def test_all():
+    test_Gauss()
+    test_integr_Simpson()
+    test_newton()
