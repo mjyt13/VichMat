@@ -6,7 +6,7 @@
 
 # Counter - счетчик для строк, Subcounter - счетчик для элементов
 
-Numbers = [[3,4,6,7],
+Numbers = [[3,4,6,6],
            [2,3,8,1],
            [5,4,2,6]]
 # Проверка матрицы
@@ -105,7 +105,9 @@ def Gauss (Matr):
         num_str = num_str - 1
     # Изменить порядок решений
     Solutions.reverse()
-    PrintString(Solutions)
+    for i in range(len(Solutions)):
+        Solutions[i] = round(Solutions[i],3)
+    return Solutions
 
 # Вывод матрицы
 def PrintString (Mass):

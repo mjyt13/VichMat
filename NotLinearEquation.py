@@ -26,7 +26,7 @@ def graphics():
 
 # Здесь обозначена функция, которую нужно будет приравнивать к нулю для решения уравнения
 def f(x):
-    return x ** 2 - 2
+    return x ** 2 - 20
 
 # Здесь находится производная изначальной функции, а также её значение в точке
 def df(num):
@@ -135,10 +135,11 @@ def newton(x1,x2):
         v2 = v1
         # само выражения для вычисления
         v1 = v2 - (f(v2)/df(v2))
-    return v1
-
+    return round(v1,2)
+"""
 print(dixotomy(points()[0],points()[1]))
 print(simple_iterations_1(points()[0],points()[1]))
 print(simple_iterations_2(points()[0],points()[1]))
 print(newton(points()[0],points()[1]))
 graphics()
+"""

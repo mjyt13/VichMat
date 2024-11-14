@@ -161,7 +161,7 @@ def integr_Simpson(t):
         I = I + (f(i * h) + 4 * f((i + 0.5) * h) + f((i + 1) * h)) * (h / 6)
         fargs.append(I)
         vargs.append((f(i * h) + 4 * f((i + 0.5) * h) + f((i + 1) * h)) * (h / 6) - (Ia_f((i+1) * h) - Ia_f(i * h)))
-    plt.figure().set_figheight(11)
+    """plt.figure().set_figheight(11)
     plt.subplot(2, 1, 1)
     plt.grid(True)
     plt.title("Интегрирование методом парабол")
@@ -170,14 +170,7 @@ def integr_Simpson(t):
     plt.grid(True)
     plt.title("Отклонение численного метода от аналитического решения")
     plt.plot(args, vargs)
-    plt.show()
-    return I
-
-
-print(integr_rectangle_L(np.pi))
-print(integr_rectangle_M(np.pi))
-print(integr_rectangle_R(np.pi))
-print(integr_trapezoid(np.pi))
-print(integr_Simpson(np.pi))
+    plt.show()"""
+    return round(float(I),2)
 
 # джим корбетт ясон бернадзе дина санычанг
